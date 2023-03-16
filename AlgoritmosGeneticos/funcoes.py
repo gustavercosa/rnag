@@ -55,6 +55,22 @@ def selecao_roleta_max(populacao, fitness):
     populacao_selecionada = random.choices(populacao, weights=fitness, k=len(populacao))
     return populacao_selecionada
 
+def cruzamento_ponto_simples(pai, mae):
+    """Operador de cruzamento de ponto simples.
+    
+    Argumentos:
+        pai: uma lista representando um indivíduo.
+        mae: uma lista representando um indivíduo.
+        
+    Retorna:
+        Duas listas, sendo que cada uma representa um filho dos pais que foram os argumentos.
+    """
+    ponto_de_corte = random.randint(1, len(pai)-1)
+    
+    filho1 = pai[:ponto_de_corte] + mae[ponto_de_corte:]
+    filho2 = mae[:ponto_de_corte] + pai[ponto_de_corte:]
+    return filho1, filho2
+
 def funcao_objetiva_cb(individuo):
     """Computa a função objetiva no problema das caixas binárias.
 
@@ -80,3 +96,4 @@ def funcao_objetiva_pop_cb(populacao):
         fobj = funcao_objetiva_cb(individuo)
         fitness.append(fobj)
     return fitness
+
