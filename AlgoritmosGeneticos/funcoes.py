@@ -10,6 +10,18 @@ def gene_cb():
     gene = random.choice(lista)
     return gene
 
+def gene_cnb(valor_max_caixa):
+    """Gera um gene válido para o problema das caixas não-binárias.
+    
+    Argumentos:
+        valor_max_caixa: valor máximo que a caixa pode assumir.
+
+    Retorna:
+        Um valor entre 0 e o "valor_max_caixa" (incluso).
+    """
+    gene = random.randint(0, valor_max_caixa)
+    return gene
+
 def individuo_cb(n):
     """Gera um indivíduo para o problema das caixas binárias.
 
@@ -22,6 +34,22 @@ def individuo_cb(n):
     individuo = []
     for i in range(n):
         gene = gene_cb()
+        individuo.append(gene)
+    return individuo
+
+def individuo_cnb(numero_genes, valor_max_caixa):
+    """Gera um indivíduo válido para o problema das caixas não-binárias.
+    
+    Argumentos:
+        numero_genes: número de genes na lista que representa o indivíduo.
+        valor_max_caixa: valor máximo que a caixa pode assumir.
+        
+    Returna:
+        Uma lista que representa um indivíduo válido para o problema das caixas não-binárias.
+    """
+    individuo = []
+    for _ in range(numero_genes):
+        gene = gene_cnb(valor_max_caixa)
         individuo.append(gene)
     return individuo
 
@@ -40,6 +68,21 @@ def populacao_cb(tamanho, n):
         populacao.append(individuo_cb(n))
     return populacao
 
+def populacao_cnb(tamanho, n_genes, valor_max_caixa):
+    """Cria uma população no problema das caixas não-binárias.
+    Args:
+      tamanho: tamanho da população.
+      n_genes: número de genes do indivíduo.
+      valor_max_caixa: maior número inteiro possível dentro de uma caixa
+    Returns:
+      Uma lista onde cada item é um indiviuo. Um individuo é uma lista com
+      `n_genes` genes.
+    """
+    populacao = []
+    for _ in range(tamanho):
+        populacao.append(individuo_cnb(n_genes, valor_max_caixa))
+    return populacao    
+    
 def selecao_roleta_max(populacao, fitness):
     """ Seleciona indivíduos de uma população usando o método da roleta.
     
@@ -84,6 +127,20 @@ def mutacao_cb(individuo):
     individuo[gene_a_ser_mutado] = gene_cb()
     return individuo
 
+def mutacao_cnb(individuo, valor_max_caixa):
+    """Realiza a mutação do indivíduo.
+    
+    Argumentos:
+        individuo: indivíduo que deve sofrer a mutação.
+        valor_max_caixa: valor máximo que a caixa pode asssumir.
+        
+    Retorna:
+        Indivíduo que sofreu a mutação.
+    """
+    gene_a_ser_mutado = random.randint(0, len(individuo)-1)
+    individuo[gene_a_ser_mutado] = gene_cnb(valor_max_caixa)
+    return individuo
+
 def funcao_objetiva_cb(individuo):
     """Computa a função objetiva no problema das caixas binárias.
 
@@ -94,6 +151,18 @@ def funcao_objetiva_cb(individuo):
         Um valor representando a soma dos genes do indivíduo.
     """
     return sum(individuo)
+
+def funcao_objetiva_cnb(individuo):
+    """Calcula a fitness do indivíduo para o problema das caixas não-binárias.
+    
+    Argumentos:
+        individuo: lista que representa um indivíduo dentro do problema das caixas não-binárias.
+        
+    Retorna:
+        Um valor que presenta o fitness do indivíduo.
+    """
+    fitness = sum(individuo)
+    return fitness
 
 def funcao_objetiva_pop_cb(populacao):
     """Calcula a função objetiva para todos os membros de uma população.
@@ -109,4 +178,19 @@ def funcao_objetiva_pop_cb(populacao):
         fobj = funcao_objetiva_cb(individuo)
         fitness.append(fobj)
     return fitness
+
+def funcao_objetiva_pop_cnb(populacao):
+    """Calcula o fitness da população completa.
+    
+    Argumentos:
+        populacao: lista com todos os indivíduos da população.
+        
+    Retorna:
+        Uma lista com o fitness de cada indivíduo em ordem.
+    """
+    fitness_pop = []
+    for individuo in populacao:
+        fitness_ind = funcao_objetiva_cnb(individuo)
+        fitness_pop.append(fitness_ind)
+    return fitness_pop
 
