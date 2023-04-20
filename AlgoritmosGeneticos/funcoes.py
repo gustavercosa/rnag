@@ -1,22 +1,66 @@
-<<<<<<< HEAD
-=======
 import random
 
 
-# NOVIDADE
+def distancia_entre_dois_pontos(a, b):
+    """Computa a distância Euclidiana entre dois pontos em R².
+
+    Argumentos:
+      a: lista contendo as coordenadas x e y de um ponto.
+      b: lista contendo as coordenadas x e y de um ponto.
+
+    Retorna:
+      Distância entre as coordenadas dos pontos `a` e `b`.
+    """
+
+    x1 = a[0]
+    x2 = b[0]
+    y1 = a[1]
+    y2 = b[1]
+
+    dist = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** (1 / 2)
+
+    return dist
+
+
 def cria_cidades(n):
     """Cria um dicionário aleatório de cidades com suas posições (x,y).
-    
+
     Argumentos:
       n: inteiro positivo; o número de cidades que serão visitadas pelo caixeiro.
-      
+
     Retorna:
       Um dicionário contendo o nome das cidades como chaves e a coordenada no plano cartesiano das cidades como valores.
     """
     cidades = {}
     for i in range(n):
         cidades[f"Cidade {i}"] = (random.random(), random.random())
-    return 
+    return cidades
+
+
+def computa_mochila(individuo, objetos, ordem_dos_nomes):
+    """Computa o valor total e peso total de uma mochila.
+
+    Argumentos:
+      individiuo: uma lista binária contendo a informação de quais objetos serão selecionados.
+      objetos: um dicionário onde as chaves são os nomes dos objetos e os valores são dicionários com a informação do peso e valor.
+      ordem_dos_nomes: uma lista contendo a ordem dos nomes dos objetos.
+
+    Retorna:
+      valor_total: valor total dos itens da mochila em unidades de dinheiros.
+      peso_total: peso total dos itens da mochila em unidades de massa.
+    """
+
+    valor_total = 0
+    peso_total = 0
+
+    for pegou_o_item_ou_nao, nome_do_item in zip(individuo, ordem_dos_nomes):
+        if pegou_o_item_ou_nao == 1:
+            valor_do_item = objetos[nome_do_item]["valor"]
+            peso_do_item = objetos[nome_do_item]["peso"]
+
+            valor_total = valor_total + valor_do_item
+            peso_total = peso_total + peso_do_item
+    return valor_total, peso_total
 
 
 def gene_cb():
@@ -103,7 +147,6 @@ def individuo_cv(cidades):
     return nomes
 
 
-# NOVIDADE
 def individuo_senha(tamanho_senha, letras):
     """Cria um candidato para o problema da senha.
 
@@ -172,7 +215,6 @@ def populacao_inicial_senha(tamanho, tamanho_senha, letras):
     return populacao
 
 
-# NOVIDADE
 def populacao_inicial_cv(tamanho, cidades):
     """Cria população inicial no problema do caixeiro viajante.
     Args
@@ -260,6 +302,30 @@ def cruzamento_ponto_simples(pai, mae):
     return filho1, filho2
 
 
+def cruzamento_ordenado(pai, mae):
+    """Operador de cruzamento ordenado. Neste cruzamento, os filhos mantêm os mesmos genes que seus pais tinham, porém, em outra ordem. Trata-se de um tipo de cruzamento útil para problemas onde a ordem dos genes é importante e não podemos alterar os genes em si. É um cruzamento que pode ser usado no problema do caixeiro viajante.
+
+    Argumentos:
+      pai: uma lista representando um indivíduo.
+      mae: uma lista representando um indivíduo.
+
+    Retorna:
+      Duas listas, sendo que cada uma representa um filho dos pais que foram os argumentos. Estas listas mantém os genes originais dos pais, porém altera a ordem deles.
+    """
+    corte1 = random.randint(0, len(pai) - 2)
+    corte2 = random.randint(corte1 + 1, len(pai) - 1)
+
+    filho1 = pai[corte1:corte2]
+    for gene in mae:
+        if gene not in filho1:
+            filho1.append(gene)
+    filho2 = mae[corte1:corte2]
+    for gene in pai:
+        if gene not in filho2:
+            filho2.append(gene)
+    return filho1, filho2
+
+
 def mutacao_cb(individuo):
     """Realiza a mutação de um gene no problema das caixas binárias.
 
@@ -330,7 +396,27 @@ def mutacao_tamanho_senha(individuo, letras, maximo):
     return individuo
 
 
->>>>>>> 4dfa9882fc3288ebbefc3768deedcf655f36c03c
+def mutacao_de_troca(individuo):
+    """Troca o valor de dois genes.
+
+    Argumentos:
+      individuo: uma lista representado um indivíduo.
+
+    Retorna:
+      O indivíduo recebido como argumento, porém com dois dos seus genes trocados de posição.
+    """
+
+    indices = list(range(len(individuo)))
+    lista_sorteada = random.sample(indices, k=2)
+
+    indice1 = lista_sorteada[0]
+    indice2 = lista_sorteada[1]
+
+    individuo[indice1], individuo[indice2] = individuo[indice2], individuo[indice1]
+
+    return individuo
+
+
 def funcao_objetiva_cb(individuo):
     """Computa a função objetiva no problema das caixas binárias.
 
@@ -340,9 +426,6 @@ def funcao_objetiva_cb(individuo):
     Retorna:
         Um valor representando a soma dos genes do indivíduo.
     """
-<<<<<<< HEAD
-    return sum(individuo) 
-=======
     return sum(individuo)
 
 
@@ -375,42 +458,41 @@ def funcao_objetiva_senha(individuo, senha_verdadeira):
         diferenca = diferenca + abs(ord(letra_candidato) - ord(letra_oficial))
     return diferenca
 
-# NOVIDADE
+
 def funcao_objetiva_cv(individuo, cidades):
     """Computa a função objetiva de um indivíduo no problema do caixeiro viajante.
-    
+
     Argumentos:
       individiuo: uma lista contendo a ordem das cidades que serão visitadas
       cidades: um dicionário onde as chaves são os nomes das cidades e os valores são as coordenadas das cidades.
-      
+
     Retorna:
       A distância percorrida pelo caixeiro seguindo o caminho contido no `individuo`. Lembrando que após percorrer todas as cidades em ordem, o caixeiro retorna para a cidade original de onde começou sua viagem.
     """
     distancia = 0
 
     for posicao in range(len(individuo) - 1):
-        
         partida = cidades[individuo[posicao]]
         chegada = cidades[individuo[posicao + 1]]
-        
+
         percurso = distancia_entre_dois_pontos(partida, chegada)
-        distancia = distancia + percurso        
-               
+        distancia = distancia + percurso
     # Calculando o caminho de volta para a cidade inicial
     partida = cidades[individuo[-1]]
     chegada = cidades[individuo[0]]
+
     percurso = distancia_entre_dois_pontos(partida, chegada)
     distancia = distancia + percurso
     return distancia
 
 
 def funcao_objetiva_senha_indeterminada(individuo, senha_verdadeira):
-    """Computa a função objetivo no problema da senha.
-    
+    """Computa a função objetiva no problema da senha.
+
     Argumentos:
       individiuo: lista contendo as letras da senha.
       senha_verdadeira: a senha que você está tentando descobrir.
-      
+
     Retorna:
       A "distância" entre a senha proposta e a senha verdadeira.
     """
@@ -418,11 +500,31 @@ def funcao_objetiva_senha_indeterminada(individuo, senha_verdadeira):
 
     for letra_candidato, letra_oficial in zip(individuo, senha_verdadeira):
         diferenca += abs(ord(letra_candidato) - ord(letra_oficial))
-
     delta_tamanho = abs(len(senha_verdadeira) - len(individuo)) * 10
     diferenca += delta_tamanho
 
     return diferenca
+
+
+def funcao_objetiva_mochila(individuo, objetos, limite, ordem_dos_nomes):
+    """Computa a função objetiva de um candidato no problema da mochila.
+
+    Argumentos:
+      individiuo: uma lista binária contendo a informação de quais objetos serão selecionados.
+      objetos: um dicionário onde as chaves são os nomes dos objetos e os valores são dicionários com a informação do peso e valor.
+      limite: um número indicando o limite de peso que a mochila aguenta.
+      ordem_dos_nomes: uma lista contendo a ordem dos nomes dos objetos.
+
+    Retorna:
+      Um valor total dos itens inseridos na mochila considerando a penalidade para quando o peso excede o limite.
+    """
+
+    valor_mochila, peso_mochila = computa_mochila(individuo, objetos, ordem_dos_nomes)
+
+    if peso_mochila > limite:
+        return 0.01
+    else:
+        return valor_mochila
 
 
 def funcao_objetiva_pop_cb(populacao):
@@ -458,7 +560,7 @@ def funcao_objetiva_pop_cnb(populacao):
 
 
 def funcao_objetiva_pop_senha(populacao, senha_verdadeira):
-    """Computa a funcao objetivo de uma populaçao no problema da senha.
+    """Computa a funcao objetiva de uma populaçao no problema da senha.
 
     Argumentos:
       populacao: lista com todos os individuos da população.
@@ -490,19 +592,39 @@ def funcao_objetiva_pop_senha_tamanho_indeterminado(populacao, senha_verdadeira)
     ]
     return resultado
 
-# NOVIDADE
+
 def funcao_objetiva_pop_cv(populacao, cidades):
     """Computa a função objetiva de uma população no problema do caixeiro viajante.
-    
+
     Argumentos:
       populacao: lista com todos os indivíduos da população.
       cidades: dicionário onde as chaves são os nomes das cidades e os valores são as coordenadas das cidades.
-      
-    Retorna: 
+
+    Retorna:
         Uma lista contendo a distância percorrida pelo caixeiro para todos os indivíduos da população.
     """
     resultado = []
     for individuo in populacao:
-        resultado.append(funcao_objetivo_cv(individuo, cidades))
+        resultado.append(funcao_objetiva_cv(individuo, cidades))
     return resultado
->>>>>>> 4dfa9882fc3288ebbefc3768deedcf655f36c03c
+
+
+def funcao_objetiva_pop_mochila(populacao, objetos, limite, ordem_dos_nomes):
+    """Computa a função objetiva de uma população no problema da mochila.
+
+    Argumentos:
+      populacao: uma lista com todos os indivíduos da população
+      objetos: um dicionário onde as chaves são os nomes dos objetos e os valores são dicionários com a informação do peso e valor.
+      limite: um número indicando o limite de peso que a mochila aguenta.
+      ordem_dos_nomes: uma lista contendo a ordem dos nomes dos objetos.
+
+    Retorna:
+      Uma lista contendo o valor dos itens da mochila de cada indivíduo.
+    """
+
+    resultado = []
+    for individuo in populacao:
+        resultado.append(
+            funcao_objetiva_mochila(individuo, objetos, limite, ordem_dos_nomes)
+        )
+    return resultado
