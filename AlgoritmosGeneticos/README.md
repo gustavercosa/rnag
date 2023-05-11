@@ -41,12 +41,12 @@
     
 <h2 align="left"> Quais são as funções? </h2>
 <blockquote>
-<p align="justify"> Na pasta "funcoes.py", temos oito tipos de funções:</p>
+<p align="justify"> Na pasta "funcoes.py", temos nove tipos de funções:</p>
 <ol>
     <li><p align="justify"> As funções de <strong>suporte</strong>, utilizadas para especificar uma resolução de alguma problemática.</p></li>
     <li><p align="justify"> As funções de <strong>genes</strong>, utilizadas para criar um objeto inicial de interação e manipulação dos algoritmos.</p></li>
     <li><p align="justify"> As funções de <strong>indivíduos</strong>, utilizadas para criar um conjunto de genes, isto é, uma composição complexas de objetos para serem analisados.</p></li>
-    <li><p align="justify"> As funções de <strong>população</strong></p>, utilizadas, de modo análogo às funções anteriores, para compor uma associação de indivíduos, ou seja, uma grade de objetos para serem analisados.</li>
+    <li><p align="justify"> As funções de <strong>população</strong>, utilizadas, de modo análogo às funções anteriores, para compor uma associação de indivíduos, ou seja, uma grade de objetos para serem analisados.</p></li>
     <li><p align="justify"> As funções de <strong>seleção</strong>, utilizadas para escolher, com base em determinados critérios, indivíduos de uma população.</p></li>
     <li><p align="justify"> As funções de <strong>cruzamento</strong>, utilizadas para entrelaçar indivíduos selecionados.</p></li>
     <li><p align="justify"> As funções de <strong>mutação</strong>, utilizadas para alterar, de forma aleatória, um gene (ou mais) de um indivíduo, que também pode ser aleatório.</p></li>
@@ -60,5 +60,5 @@
 <blockquote> 
 <p align="justify"> Para entender como isso ocorre, é preciso ter em mente como há a validação dos processamentos até chegar em um resultado.</p>   
 <p align="justify"> Nisso, temos o uso do <i>fitness</i>. O papel do fitness é medir a aptidão de cada indivíduo em relação ao objetivo do problema que está sendo resolvido.</p>  
-<p align="justify"> Em outras palavras, é uma função que pontua cada pessoa com base em quão bem ela se encaixa em uma determinada tarefa. E, a partir disso, podemos ver como o código está bem aquedado.</p>  
+<p align="justify"> Em outras palavras, é uma função que pontua cada pessoa com base em quão bem ela se encaixa em uma determinada tarefa. E, a partir disso, podemos ver como o </p>  
 </blockquote>
