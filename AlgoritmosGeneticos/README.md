@@ -16,7 +16,7 @@
 <p align="justify"> Algoritmos genéticos têm sido usados em muitos campos, como engenharia, finanças, bioinformática, e são particularmente úteis quando soluções devem ser encontradas em espaços de busca complexos e multidimensionais.</p>
 </blockquote> 
 
-<h2 align="left"> Diferença </h2>
+<h2 align="left"> Diferenças </h2>
 <blockquote> 
 <p align="justify"> Em comparação com os algoritmos tradicionais, os algoritmos genéticos diferem em vários aspectos, como:</p>
 <ol>
@@ -42,13 +42,14 @@
 <h2 align="left"> Quais são as funções? </h2>
 <p align="justify"> Na pasta "funcoes.py", temos oito tipos de funções:</p>
 <ol>
-    <li><p align="justify"> As funções de <strong>suporte</strong></p></li>
-    <li><p align="justify"> As funções de <strong>genes</strong></p></li>
-    <li><p align="justify"> As funções de <strong>indivíduos</strong></p></li>
-    <li><p align="justify"> As funções de <strong>genes</strong></p></li>
-    <li><p align="justify"> As funções de <strong>população</strong></p></li>
-    <li><p align="justify"> As funções de <strong>seleção</strong></p></li>
-    <li><p align="justify"> As funções de <strong>cruzamento</strong></p></li>
-    <li><p align="justify"> As funções de <strong>mutação</strong></p></li>
-    <li><p align="justify"> As funções <strong>objetivas <i>para indivíduos</i></strong></p></li>
-    <li><p align="justify"> As funções <strong>objetivas <i>para população</i></strong></p></li>
+    <li><p align="justify"> As funções de <strong>suporte</strong>, utilizadas para especificar uma resolução de alguma problemática.</p></li>
+    <li><p align="justify"> As funções de <strong>genes</strong>, utilizadas para criar um objeto inicial de interação e manipulação dos algoritmos.</p></li>
+    <li><p align="justify"> As funções de <strong>indivíduos</strong>, utilizadas para criar um conjunto de genes, isto é, uma composição complexas de objetos para serem analisados.</p></li>
+    <li><p align="justify"> As funções de <strong>população</strong></p>, utilizadas, de modo análogo às funções anteriores, para compor uma associação de indivíduos, ou seja, uma grade de objetos para serem analisados.</li>
+    <li><p align="justify"> As funções de <strong>seleção</strong>, utilizadas para escolher, com base em determinados critérios, indivíduos de uma população.</p></li>
+    <li><p align="justify"> As funções de <strong>cruzamento</strong>, utilizadas para entrelaçar indivíduos selecionados.</p></li>
+    <li><p align="justify"> As funções de <strong>mutação</strong>, utilizadas para alterar, de forma aleatória, um gene (ou mais) de um indivíduo, que também pode ser aleatório.</p></li>
+    <li><p align="justify"> As funções <strong>objetivas <i>para indivíduos</i></strong>, utilizadas para ver o desempenho de um indivíduo, maximizando ou minimizandor o valor de <i>fitness</i>.</p></li>
+    <li><p align="justify"> As funções <strong>objetivas <i>para população</i></strong>, utilizadas para ver o desempenho de uma população, maximizando ou minimizando o valor de <i>fitness</i>.</p></li>
+</ol>
+<p align="justify"> Dentro da pasta, há uma coletânea de funções para cada tipo e as diversas explicações que compõem o conjunto. É recomendado ler a descrição do objetivo e ver como o código foi construído, para entender a atribuição de cada função.</p>
