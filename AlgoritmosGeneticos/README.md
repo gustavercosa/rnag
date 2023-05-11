@@ -20,7 +20,7 @@
 <blockquote> 
 <p align="justify"> Em comparação com os algoritmos tradicionais, os algoritmos genéticos diferem em vários aspectos, como:</p>
 <ol>
-  <li>Os algoritmos genéticos podem avaliar várias soluções candidatas simultaneamente, enquanto os algoritmos tradicionais geralmente avaliam uma solução por vez.</li>
+  <li><p align="justify">Os algoritmos genéticos podem avaliar várias soluções candidatas simultaneamente, enquanto os algoritmos tradicionais geralmente avaliam uma solução por vez.</p></li>
   <li>Os algoritmos genéticos podem explorar com eficiência espaços de busca muito grandes e complexos, enquanto os algoritmos convencionais podem se esforçar para encontrar soluções em um espaço de busca com muitas variáveis e restrições.</li>
   <li>Os algoritmos genéticos tendem a encontrar soluções ótimas globais, enquanto algoritmos tradicionais podem ficar presos em mínimos locais.</li>
   <li>Os algoritmos genéticos são algoritmos heurísticos que utilizam técnicas probabilísticas e estocásticas para explorar o espaço de busca, enquanto os algoritmos convencionais são algoritmos determinísticos que seguem uma estratégia predeterminada para encontrar uma solução.</li>
