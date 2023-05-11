@@ -18,13 +18,17 @@
 <h2 align="left"> O que temos aqui? </h2>
 <blockquote> 
 <p align="justify"> Nesse repositório, temos as seguintes pastas:</p>
-<p align="justify"> AlgoritmosGeneticos: é a parte exploratória de <strong>Algoritmos Genéticos</strong>. Contém códigos (com comentários intrínsecos) e anotações sobre as problemáticas estudadas.</p> 
-<p align="justify"> RedesNeurais: é a parte exploratória de <strong>Redes Neurais</strong>. Contém códigos (com comentários intrínsecos) e anotações sobre as problemáticas estudadas. </p>
-</blockquote> 
+<ul>
+  <li><p align="justify">AlgoritmosGeneticos: é a parte exploratória de <strong>Algoritmos Genéticos</strong>. Contém códigos (com comentários intrínsecos) e anotações sobre as problemáticas estudadas.</p></li>
+  <li><p align="justify">RedesNeurais: é a parte exploratória de <strong>Redes Neurais</strong>. Contém códigos (com comentários intrínsecos) e anotações sobre as problemáticas estudadas.</p><li>
+</ul>
+</blockquote>
 
 <blockquote> 
 <p align="justify"> Nesse repositório, temos os seguintes arquivos:</p>
-<p align="justify"> .gitignore: é um recurso do GitHub que possui alguns arquivos ignorados para não atrapalhar o repositório.</p> 
-<p align="justify"> LICENSE: é uma licença livre que inclui regras para usar, modificar e distribuir o suporte lógico de acordo com seus termos. </p>
-<p align="justify"> README.md: é o arquivo que você está lendo no momento. </p>
+<ul>
+    <li><p align="justify">.gitignore: é um recurso do GitHub que possui alguns arquivos ignorados para não atrapalhar o repositório.</p></li>
+    <li><p align="justify">LICENSE: é uma licença livre que inclui regras para usar, modificar e distribuir o suporte lógico de acordo com seus termos.</p></li>
+    <li><p align="justify">README.md: é o arquivo que você está lendo no momento.</p></li>
+</ul>
 </blockquote> 

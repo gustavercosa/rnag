@@ -28,3 +28,16 @@
 </ol>
 <p align="justify"> Em suma, enquanto os algoritmos tradicionais são algoritmos de otimização determinísticos que seguem uma estratégia predeterminada para encontrar uma solução, os algoritmos genéticos são uma classe de algoritmos de otimização que exploram o espaço de busca de forma heurística e adaptativa. O que faz sentido, quando vemos a sua inspiração na evolução biológica.</p>
 </blockquote>
+
+<h2 align="left"> O que temos aqui? </h2>
+<blockquote> 
+<p align="justify"> Em comparação com os algoritmos tradicionais, os algoritmos genéticos diferem em vários aspectos, como:</p>
+<ol>
+  <li><p align="justify">Os algoritmos genéticos podem avaliar várias soluções candidatas simultaneamente, enquanto os algoritmos tradicionais geralmente avaliam uma solução por vez.</p></li>
+  <li><p align="justify">Os algoritmos genéticos podem explorar com eficiência espaços de busca muito grandes e complexos, enquanto os algoritmos convencionais podem se esforçar para encontrar soluções em um espaço de busca com muitas variáveis e restrições.</p></li>
+  <li><p align="justify">Os algoritmos genéticos tendem a encontrar soluções ótimas globais, enquanto algoritmos tradicionais podem ficar presos em mínimos locais.</p></li>
+  <li><p align="justify">Os algoritmos genéticos são algoritmos heurísticos que utilizam técnicas probabilísticas e estocásticas para explorar o espaço de busca, enquanto os algoritmos convencionais são algoritmos determinísticos que seguem uma estratégia predeterminada para encontrar uma solução.</p></li>
+  <li><p align="justify">Os algoritmos genéticos são adaptativos e podem se adaptar às mudanças no espaço de busca ao longo do tempo, enquanto os algoritmos tradicionais são estáticos e não podem se adaptar às mudanças no espaço de busca.</p></li>
+</ol>
+<p align="justify"> Em suma, enquanto os algoritmos tradicionais são algoritmos de otimização determinísticos que seguem uma estratégia predeterminada para encontrar uma solução, os algoritmos genéticos são uma classe de algoritmos de otimização que exploram o espaço de busca de forma heurística e adaptativa. O que faz sentido, quando vemos a sua inspiração na evolução biológica.</p>
+</blockquote>
