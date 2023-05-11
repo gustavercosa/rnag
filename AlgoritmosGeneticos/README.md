@@ -1,7 +1,7 @@
 ![REDES NEURAIS E ALGORITMOS GENÉTICOS (3)](https://github.com/gustavercosa/rnag/assets/107042962/45a07711-4c97-42d8-ae73-ce9d86daf08d)
 <h1 align="center"> </h1>
 
-<h2 align="left"> Aprofundação </h2> 
+<h2 align="left"> Introdução </h2> 
 <blockquote> 
 <p align="justify"> Essa é a parte que contém os experimentos e as discussões que tangem o aprendizado de Algoritmos Genéticos.</p>
 <img src="https://img.shields.io/badge/STATUS-Concluído-576CFB"> <img src="https://img.shields.io/badge/LICENCE-GNU%20General%20Public%20License%20v3.0-75CA75">
