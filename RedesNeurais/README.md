@@ -1,5 +1,3 @@
-# Experimentos de redes neurais artificiais
+![REDES NEURAIS E ALGORITMOS GENÉTICOS (3)](https://github.com/gustavercosa/rnag/assets/107042962/45a07711-4c97-42d8-ae73-ce9d86daf08d)
+<h1 align="center"> </h1>
 
-Coloque seus experimentos de redes neurais nesta pasta.
-
-Esceva um README aqui para guiar o leitor sobre seus experimentos realizados.

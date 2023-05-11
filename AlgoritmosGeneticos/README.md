@@ -1,5 +1,2 @@
-# Experimentos de otimização e algoritmos genéticos
-
-Coloque seus experimentos de algoritmos genéticos nesta pasta.
-
-Esceva um README aqui para guiar o leitor sobre seus experimentos realizados.
+![REDES NEURAIS E ALGORITMOS GENÉTICOS (3)](https://github.com/gustavercosa/rnag/assets/107042962/95007b4c-97d3-48c8-a2f0-2ba1ea833ab0)
+<h1 align="center"> </h1>
