@@ -31,9 +31,24 @@
 
 <h2 align="left"> O que temos aqui? </h2>
 <blockquote> 
-<p align="justify"> Nessa pasta, temos três tipos de arquivos:</p>
+<p align="justify"> Nessa pasta, temos quatro tipos de arquivos:</p>
 <ol>
     <li><p align="justify">Os arquivos com experimentos abordados em sala, que são mais conteudistas. Eles são nomeados como "Experimento A.0X", onde X representa a cronologia da sucessão do estudo.</p></li>
     <li><p align="justify">Os arquivos com experimentos exploratórios, que são conteúdos complementares, feitos sem o direcionamento em sala. Eles são nomeados como "Experimento GA.0X", onde X representa o tipo de exercício.</p></li>
+    <li><p align="justify">O arquivo "funcoes.py", que contém todas as funções gerais utilizadas.</p></li>
     <li><p align="justify">O arquivo "README.md", o qual você está lendo no momento.</p></li>
 </blockquote>
+    
+<h2 align="left"> Quais são as funções? </h2>
+<p align="justify"> Na pasta "funcoes.py", temos oito tipos de funções:</p>
+<ol>
+    <li><p align="justify"> As funções de <strong>suporte</strong></p></li>
+    <li><p align="justify"> As funções de <strong>genes</strong></p></li>
+    <li><p align="justify"> As funções de <strong>indivíduos</strong></p></li>
+    <li><p align="justify"> As funções de <strong>genes</strong></p></li>
+    <li><p align="justify"> As funções de <strong>população</strong></p></li>
+    <li><p align="justify"> As funções de <strong>seleção</strong></p></li>
+    <li><p align="justify"> As funções de <strong>cruzamento</strong></p></li>
+    <li><p align="justify"> As funções de <strong>mutação</strong></p></li>
+    <li><p align="justify"> As funções <strong>objetivas <i>para indivíduos</i></strong></p></li>
+    <li><p align="justify"> As funções <strong>objetivas <i>para população</i></strong></p></li>
