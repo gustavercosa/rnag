@@ -20,7 +20,7 @@
 <p align="justify"> Nesse repositório, temos as seguintes pastas:</p>
 <ul>
   <li><p align="justify">AlgoritmosGeneticos: é a parte exploratória de <strong>Algoritmos Genéticos</strong>. Contém códigos (com comentários intrínsecos) e anotações sobre as problemáticas estudadas.</p></li>
-  <li><p align="justify">RedesNeurais: é a parte exploratória de <strong>Redes Neurais</strong>. Contém códigos (com comentários intrínsecos) e anotações sobre as problemáticas estudadas.</p><li>
+  <li><p align="justify">RedesNeurais: é a parte exploratória de <strong>Redes Neurais</strong>. Contém códigos (com comentários intrínsecos) e anotações sobre as problemáticas estudadas.</p></li>
 </ul>
 </blockquote>
 

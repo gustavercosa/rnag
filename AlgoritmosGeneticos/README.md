@@ -31,13 +31,9 @@
 
 <h2 align="left"> O que temos aqui? </h2>
 <blockquote> 
-<p align="justify"> Em comparação com os algoritmos tradicionais, os algoritmos genéticos diferem em vários aspectos, como:</p>
+<p align="justify"> Nessa pasta, temos três tipos de arquivos:</p>
 <ol>
-  <li><p align="justify">Os algoritmos genéticos podem avaliar várias soluções candidatas simultaneamente, enquanto os algoritmos tradicionais geralmente avaliam uma solução por vez.</p></li>
-  <li><p align="justify">Os algoritmos genéticos podem explorar com eficiência espaços de busca muito grandes e complexos, enquanto os algoritmos convencionais podem se esforçar para encontrar soluções em um espaço de busca com muitas variáveis e restrições.</p></li>
-  <li><p align="justify">Os algoritmos genéticos tendem a encontrar soluções ótimas globais, enquanto algoritmos tradicionais podem ficar presos em mínimos locais.</p></li>
-  <li><p align="justify">Os algoritmos genéticos são algoritmos heurísticos que utilizam técnicas probabilísticas e estocásticas para explorar o espaço de busca, enquanto os algoritmos convencionais são algoritmos determinísticos que seguem uma estratégia predeterminada para encontrar uma solução.</p></li>
-  <li><p align="justify">Os algoritmos genéticos são adaptativos e podem se adaptar às mudanças no espaço de busca ao longo do tempo, enquanto os algoritmos tradicionais são estáticos e não podem se adaptar às mudanças no espaço de busca.</p></li>
-</ol>
-<p align="justify"> Em suma, enquanto os algoritmos tradicionais são algoritmos de otimização determinísticos que seguem uma estratégia predeterminada para encontrar uma solução, os algoritmos genéticos são uma classe de algoritmos de otimização que exploram o espaço de busca de forma heurística e adaptativa. O que faz sentido, quando vemos a sua inspiração na evolução biológica.</p>
+    <li><p align="justify">Os arquivos com experimentos abordados em sala, que são mais conteudistas. Eles são nomeados como "Experimento A.0X", onde X representa a cronologia da sucessão do estudo.</p></li>
+    <li><p align="justify">Os arquivos com experimentos exploratórios, que são conteúdos complementares, feitos sem o direcionamento em sala. Eles são nomeados como "Experimento GA.0X", onde X representa o tipo de exercício.</p></li>
+    <li><p align="justify">O arquivo "README.md", o qual você está lendo no momento.</p></li>
 </blockquote>
