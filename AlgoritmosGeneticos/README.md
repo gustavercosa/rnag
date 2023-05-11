@@ -40,6 +40,7 @@
 </blockquote>
     
 <h2 align="left"> Quais são as funções? </h2>
+<blockquote>
 <p align="justify"> Na pasta "funcoes.py", temos oito tipos de funções:</p>
 <ol>
     <li><p align="justify"> As funções de <strong>suporte</strong>, utilizadas para especificar uma resolução de alguma problemática.</p></li>
@@ -53,3 +54,11 @@
     <li><p align="justify"> As funções <strong>objetivas <i>para população</i></strong>, utilizadas para ver o desempenho de uma população, maximizando ou minimizando o valor de <i>fitness</i>.</p></li>
 </ol>
 <p align="justify"> Dentro da pasta, há uma coletânea de funções para cada tipo e as diversas explicações que compõem o conjunto. É recomendado ler a descrição do objetivo e ver como o código foi construído, para entender a atribuição de cada função.</p>
+</blockquote>
+    
+<h2 align="left"> Entendimento final </h2>
+<blockquote> 
+<p align="justify"> Para entender como isso ocorre, é preciso ter em mente como há a validação dos processamentos até chegar em um resultado.</p>   
+<p align="justify"> Nisso, temos o uso do <i>fitness</i>. O papel do fitness é medir a aptidão de cada indivíduo em relação ao objetivo do problema que está sendo resolvido.</p>  
+<p align="justify"> Em outras palavras, é uma função que pontua cada pessoa com base em quão bem ela se encaixa em uma determinada tarefa. E, a partir disso, podemos ver como o código está bem aquedado.</p>  
+</blockquote>
