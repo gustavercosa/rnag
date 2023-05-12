@@ -1,10 +1,10 @@
- from graphviz import Digraph
+from graphviz import Digraph
 
 
 def _tracar(raiz):
     """Função originalmente criada por Andrej Karpathy para construção de grafo.
 
-    Referência: https://github.com/karpathy/micrograd
+    Referência: https://github.com/karpathy/micrograd.
     """
 
     vertices, arestas = set(), set()
@@ -23,7 +23,7 @@ def _tracar(raiz):
 def plota_grafo(raiz):
     """Função originalmente criada por Andrej Karpathy para construção de grafo.
 
-    Referência: https://github.com/karpathy/micrograd
+    Referência: https://github.com/karpathy/micrograd.
     """
 
     grafo = Digraph(format="svg", graph_attr={"rankdir": "LR"})
